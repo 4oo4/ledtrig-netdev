@@ -26,8 +26,7 @@
 #include <linux/timer.h>
 #include <linux/ctype.h>
 #include <linux/leds.h>
-
-#include "leds.h"
+#include <linux/leds.h>
 
 /*
  * Configurable sysfs attributes:
