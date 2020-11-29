@@ -359,7 +359,7 @@ static void netdev_trig_activate(struct led_classdev *led_cdev)
 	trigger_data->notifier.notifier_call = netdev_trig_notify;
 	trigger_data->notifier.priority = 10;
 
-	setup_timer(&trigger_data->timer, netdev_trig_timer, (unsigned long) trigger_data);
+	timer_setup(&trigger_data->timer, netdev_trig_timer, 0);
 
 	trigger_data->led_cdev = led_cdev;
 	trigger_data->net_dev = NULL;
